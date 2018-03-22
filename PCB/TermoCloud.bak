@@ -1,0 +1,848 @@
+EESchema Schematic File Version 2
+LIBS:TermoCloud-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:TermoCloud
+LIBS:makerlab
+LIBS:TermoCloud-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "TermoCloud"
+Date "2018-02-15"
+Rev "0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 4N25 U2
+U 1 1 5A85F6BE
+P 2850 1550
+F 0 "U2" H 2650 1750 50  0000 L CNN
+F 1 "4N25" H 2850 1750 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2650 1350 50  0001 L CIN
+F 3 "" H 2850 1550 50  0001 L CNN
+	1    2850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A85F780
+P 2250 1450
+F 0 "R1" V 2330 1450 50  0000 C CNN
+F 1 "160" V 2250 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 1450 50  0001 C CNN
+F 3 "" H 2250 1450 50  0001 C CNN
+	1    2250 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A85F876
+P 2400 1650
+F 0 "#PWR01" H 2400 1400 50  0001 C CNN
+F 1 "GND" H 2400 1500 50  0000 C CNN
+F 2 "" H 2400 1650 50  0001 C CNN
+F 3 "" H 2400 1650 50  0001 C CNN
+	1    2400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC817 Q1
+U 1 1 5A85F8D8
+P 3750 1650
+F 0 "Q1" H 3950 1725 50  0000 L CNN
+F 1 "BC817" H 3950 1650 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3950 1575 50  0001 L CIN
+F 3 "" H 3750 1650 50  0001 L CNN
+	1    3750 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5A85F9D6
+P 3350 1650
+F 0 "R4" V 3430 1650 50  0000 C CNN
+F 1 "2K2" V 3350 1650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3280 1650 50  0001 C CNN
+F 3 "" H 3350 1650 50  0001 C CNN
+	1    3350 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 1450 2550 1450
+Wire Wire Line
+	2400 1650 2550 1650
+Wire Wire Line
+	3150 1650 3200 1650
+Wire Wire Line
+	3500 1650 3550 1650
+$Comp
+L GND #PWR02
+U 1 1 5A85FA9A
+P 3850 1900
+F 0 "#PWR02" H 3850 1650 50  0001 C CNN
+F 1 "GND" H 3850 1750 50  0000 C CNN
+F 2 "" H 3850 1900 50  0001 C CNN
+F 3 "" H 3850 1900 50  0001 C CNN
+	1    3850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1900 3850 1850
+$Comp
+L +5V #PWR03
+U 1 1 5A85FADB
+P 3850 750
+F 0 "#PWR03" H 3850 600 50  0001 C CNN
+F 1 "+5V" H 3850 890 50  0000 C CNN
+F 2 "" H 3850 750 50  0001 C CNN
+F 3 "" H 3850 750 50  0001 C CNN
+	1    3850 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1550 3150 1550
+Wire Wire Line
+	3250 850  3250 1550
+Wire Wire Line
+	3250 850  3850 850 
+$Comp
+L D D1
+U 1 1 5A85FB67
+P 3850 1150
+F 0 "D1" H 3850 1250 50  0000 C CNN
+F 1 "1N4148" H 3850 1050 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMB" H 3850 1150 50  0001 C CNN
+F 3 "" H 3850 1150 50  0001 C CNN
+	1    3850 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 750  3850 1000
+Connection ~ 3850 850 
+Wire Wire Line
+	3850 1300 3850 1450
+Text GLabel 2050 1450 0    60   Input ~ 0
+SET
+Wire Wire Line
+	2050 1450 2100 1450
+$Comp
+L 4N25 U3
+U 1 1 5A85FFB9
+P 2850 3250
+F 0 "U3" H 2650 3450 50  0000 L CNN
+F 1 "4N25" H 2850 3450 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2650 3050 50  0001 L CIN
+F 3 "" H 2850 3250 50  0001 L CNN
+	1    2850 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5A85FFBF
+P 2250 3150
+F 0 "R2" V 2330 3150 50  0000 C CNN
+F 1 "160" V 2250 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 3150 50  0001 C CNN
+F 3 "" H 2250 3150 50  0001 C CNN
+	1    2250 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5A85FFC5
+P 2400 3350
+F 0 "#PWR04" H 2400 3100 50  0001 C CNN
+F 1 "GND" H 2400 3200 50  0000 C CNN
+F 2 "" H 2400 3350 50  0001 C CNN
+F 3 "" H 2400 3350 50  0001 C CNN
+	1    2400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC817 Q2
+U 1 1 5A85FFCB
+P 3750 3350
+F 0 "Q2" H 3950 3425 50  0000 L CNN
+F 1 "BC817" H 3950 3350 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3950 3275 50  0001 L CIN
+F 3 "" H 3750 3350 50  0001 L CNN
+	1    3750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5A85FFD1
+P 3350 3350
+F 0 "R5" V 3430 3350 50  0000 C CNN
+F 1 "2K2" V 3350 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3280 3350 50  0001 C CNN
+F 3 "" H 3350 3350 50  0001 C CNN
+	1    3350 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 3150 2550 3150
+Wire Wire Line
+	2400 3350 2550 3350
+Wire Wire Line
+	3150 3350 3200 3350
+Wire Wire Line
+	3500 3350 3550 3350
+$Comp
+L GND #PWR05
+U 1 1 5A85FFDB
+P 3850 3600
+F 0 "#PWR05" H 3850 3350 50  0001 C CNN
+F 1 "GND" H 3850 3450 50  0000 C CNN
+F 2 "" H 3850 3600 50  0001 C CNN
+F 3 "" H 3850 3600 50  0001 C CNN
+	1    3850 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3600 3850 3550
+$Comp
+L +5V #PWR06
+U 1 1 5A85FFE2
+P 3850 2450
+F 0 "#PWR06" H 3850 2300 50  0001 C CNN
+F 1 "+5V" H 3850 2590 50  0000 C CNN
+F 2 "" H 3850 2450 50  0001 C CNN
+F 3 "" H 3850 2450 50  0001 C CNN
+	1    3850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3250 3150 3250
+Wire Wire Line
+	3250 2550 3250 3250
+Wire Wire Line
+	3250 2550 3850 2550
+$Comp
+L D D2
+U 1 1 5A85FFEB
+P 3850 2850
+F 0 "D2" H 3850 2950 50  0000 C CNN
+F 1 "1N4148" H 3850 2750 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMB" H 3850 2850 50  0001 C CNN
+F 3 "" H 3850 2850 50  0001 C CNN
+	1    3850 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 2450 3850 2700
+Connection ~ 3850 2550
+Wire Wire Line
+	3850 3000 3850 3150
+Text GLabel 2050 3150 0    60   Input ~ 0
+RESET
+Wire Wire Line
+	2050 3150 2100 3150
+Text Notes 1050 2300 0    60   ~ 0
+Optos para el manejo de los comandos de Set y Reset\ndel microrelé
+$Comp
+L 4N25 U4
+U 1 1 5A86041A
+P 2950 4750
+F 0 "U4" H 2750 4950 50  0000 L CNN
+F 1 "4N25" H 2950 4950 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 4550 50  0001 L CIN
+F 3 "" H 2950 4750 50  0001 L CNN
+	1    2950 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5A860758
+P 2250 4650
+F 0 "R3" V 2330 4650 50  0000 C CNN
+F 1 "480" V 2250 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 4650 50  0001 C CNN
+F 3 "" H 2250 4650 50  0001 C CNN
+	1    2250 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 4650 2650 4650
+Text GLabel 2000 4650 0    60   Input ~ 0
+INPUT+
+Wire Wire Line
+	2000 4650 2100 4650
+Text Notes 950  4350 0    60   ~ 0
+Entrada digital optoacoplada\nPara detectar tubo caliente
+Text GLabel 2000 4850 0    60   Input ~ 0
+INPUT-
+Wire Wire Line
+	2000 4850 2650 4850
+$Comp
+L GND #PWR07
+U 1 1 5A860D38
+P 3350 5000
+F 0 "#PWR07" H 3350 4750 50  0001 C CNN
+F 1 "GND" H 3350 4850 50  0000 C CNN
+F 2 "" H 3350 5000 50  0001 C CNN
+F 3 "" H 3350 5000 50  0001 C CNN
+	1    3350 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4850 3350 4850
+Wire Wire Line
+	3350 4850 3350 5000
+$Comp
+L +5V #PWR08
+U 1 1 5A860DA8
+P 3400 4150
+F 0 "#PWR08" H 3400 4000 50  0001 C CNN
+F 1 "+5V" H 3400 4290 50  0000 C CNN
+F 2 "" H 3400 4150 50  0001 C CNN
+F 3 "" H 3400 4150 50  0001 C CNN
+	1    3400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5A860DE3
+P 3400 4400
+F 0 "R6" V 3480 4400 50  0000 C CNN
+F 1 "2K2" V 3400 4400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3330 4400 50  0001 C CNN
+F 3 "" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 4650 3700 4650
+Wire Wire Line
+	3400 4550 3400 4750
+Wire Wire Line
+	3400 4250 3400 4150
+Text GLabel 5700 4900 0    60   Input Italic 12
+CALIENTE_PI
+Connection ~ 3400 4650
+Text GLabel 4150 1350 2    60   Input Italic 12
+SET-
+Text GLabel 4150 3100 2    60   Input Italic 12
+RESET-
+Wire Wire Line
+	4150 1350 3850 1350
+Connection ~ 3850 1350
+Wire Wire Line
+	4150 3100 3850 3100
+Connection ~ 3850 3100
+Text Notes 9250 700  2    120  ~ 0
+ALIMENTACION
+$Comp
+L Raspberry_Pi_2_3 J2
+U 1 1 5A86165E
+P 6950 4600
+F 0 "J2" H 7650 3350 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 6550 5500 50  0000 C CNN
+F 2 "TermoCloud:RPi_Zero" H 7950 5850 50  0001 C CNN
+F 3 "" H 7000 4450 50  0001 C CNN
+	1    6950 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 5A8618D3
+P 8600 850
+F 0 "J3" H 8600 950 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 8600 650 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_PT-3.5mm_2pol" H 8600 850 50  0001 C CNN
+F 3 "" H 8600 850 50  0001 C CNN
+	1    8600 850 
+	1    0    0    -1  
+$EndComp
+Text Notes 11100 700  2    120  ~ 0
+RELÉ TERMOSTATO
+$Comp
+L Screw_Terminal_01x02 J4
+U 1 1 5A861D33
+P 10750 850
+F 0 "J4" H 10750 950 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10750 650 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_2pol" H 10750 850 50  0001 C CNN
+F 3 "" H 10750 850 50  0001 C CNN
+	1    10750 850 
+	1    0    0    -1  
+$EndComp
+Text GLabel 9850 850  0    60   Input ~ 0
+CALDERA_L
+Text GLabel 9850 1000 0    60   Input ~ 0
+CALDERA_N
+Wire Wire Line
+	9850 850  10550 850 
+Wire Wire Line
+	9850 1000 10550 1000
+Wire Wire Line
+	10550 1000 10550 950 
+Text Notes 7400 700  2    120  ~ 0
+DETECTOR TUBO CALIENTE
+Text GLabel 5900 850  0    60   Input ~ 0
+INPUT+
+Text GLabel 5900 1000 0    60   Input ~ 0
+INPUT-
+$Comp
+L Screw_Terminal_01x02 J1
+U 1 1 5A862377
+P 6750 850
+F 0 "J1" H 6750 950 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 6650 600 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_2pol" H 6750 850 50  0001 C CNN
+F 3 "" H 6750 850 50  0001 C CNN
+	1    6750 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 850  6550 850 
+Wire Wire Line
+	5900 1000 6550 1000
+Wire Wire Line
+	6550 1000 6550 950 
+$Comp
+L HLK-PM01 U6
+U 1 1 5A8DED7B
+P 8000 1350
+F 0 "U6" H 8500 1100 60  0000 C CNN
+F 1 "HLK-PM01" H 8500 1200 60  0000 C CNN
+F 2 "makerlab:HLK-PM01" H 8500 1200 60  0001 C CNN
+F 3 "" H 8500 1200 60  0001 C CNN
+	1    8000 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 1650 8000 1650
+$Comp
+L +5V #PWR09
+U 1 1 5A8DF09D
+P 9100 1750
+F 0 "#PWR09" H 9100 1600 50  0001 C CNN
+F 1 "+5V" H 9100 1890 50  0000 C CNN
+F 2 "" H 9100 1750 50  0001 C CNN
+F 3 "" H 9100 1750 50  0001 C CNN
+	1    9100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 5A8DF325
+P 9050 1400
+F 0 "#PWR010" H 9050 1150 50  0001 C CNN
+F 1 "GND" H 9050 1250 50  0000 C CNN
+F 2 "" H 9050 1400 50  0001 C CNN
+F 3 "" H 9050 1400 50  0001 C CNN
+	1    9050 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1350 9050 1350
+Wire Wire Line
+	9000 1650 9000 1800
+Wire Wire Line
+	9000 1750 9100 1750
+$Comp
+L GND #PWR011
+U 1 1 5A8DFDC7
+P 6900 6000
+F 0 "#PWR011" H 6900 5750 50  0001 C CNN
+F 1 "GND" H 6900 5850 50  0000 C CNN
+F 2 "" H 6900 6000 50  0001 C CNN
+F 3 "" H 6900 6000 50  0001 C CNN
+	1    6900 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 5900 6550 6000
+Wire Wire Line
+	6550 6000 7250 6000
+Wire Wire Line
+	7250 6000 7250 5900
+Connection ~ 6900 6000
+Wire Wire Line
+	6650 5900 6650 6000
+Connection ~ 6650 6000
+Wire Wire Line
+	6750 5900 6750 6000
+Connection ~ 6750 6000
+Wire Wire Line
+	6850 5900 6850 6000
+Connection ~ 6850 6000
+Wire Wire Line
+	6950 5900 6950 6000
+Connection ~ 6950 6000
+Wire Wire Line
+	7050 5900 7050 6000
+Connection ~ 7050 6000
+Wire Wire Line
+	7150 5900 7150 6000
+Connection ~ 7150 6000
+$Comp
+L +5V #PWR012
+U 1 1 5A8E02EA
+P 6800 3200
+F 0 "#PWR012" H 6800 3050 50  0001 C CNN
+F 1 "+5V" H 6800 3340 50  0000 C CNN
+F 2 "" H 6800 3200 50  0001 C CNN
+F 3 "" H 6800 3200 50  0001 C CNN
+	1    6800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3300 6850 3300
+Wire Wire Line
+	6800 3200 6800 3300
+Connection ~ 6800 3300
+$Comp
+L DHT11 U5
+U 1 1 5A92F1E2
+P 6550 2250
+F 0 "U5" H 6550 2700 60  0000 C CNN
+F 1 "DHT11" H 6550 2600 60  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_4pol" H 6700 2250 60  0001 C CNN
+F 3 "" H 6700 2250 60  0001 C CNN
+	1    6550 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR013
+U 1 1 5A92F53E
+P 6100 2350
+F 0 "#PWR013" H 6100 2200 50  0001 C CNN
+F 1 "+5V" H 6100 2490 50  0000 C CNN
+F 2 "" H 6100 2350 50  0001 C CNN
+F 3 "" H 6100 2350 50  0001 C CNN
+	1    6100 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 5A92F595
+P 6850 2450
+F 0 "#PWR014" H 6850 2200 50  0001 C CNN
+F 1 "GND" H 6850 2300 50  0000 C CNN
+F 2 "" H 6850 2450 50  0001 C CNN
+F 3 "" H 6850 2450 50  0001 C CNN
+	1    6850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2350 6400 2350
+Wire Wire Line
+	6850 2350 6700 2350
+$Comp
+L R R7
+U 1 1 5A9303C3
+P 6350 2550
+F 0 "R7" V 6430 2550 50  0000 C CNN
+F 1 "10K" V 6350 2550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6280 2550 50  0001 C CNN
+F 3 "" H 6350 2550 50  0001 C CNN
+	1    6350 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 2350 6500 2800
+Wire Wire Line
+	6200 1500 6200 2550
+Connection ~ 6200 2350
+Text Notes 8250 3250 0    60   ~ 0
+Pines usados por OLED !! ESTOS NO LOS PUEDO USAR !!\nGPIO6: SW1\nGPIO5: SW2\nGPIO27: W\nGPIO23: E\nGPIO17: N\nGPIO22:S\nGPIO4: IN\n----\nSDA: PIN3\nSCL: PIN5
+Text GLabel 6450 2800 0    60   Input ~ 0
+DHT_DATA
+Wire Wire Line
+	6500 2800 6450 2800
+Connection ~ 6500 2550
+Text GLabel 5400 4400 0    60   Input ~ 0
+DHT_DATA
+Text GLabel 5700 4250 0    60   Input ~ 0
+SET
+Text GLabel 5900 3900 0    60   Input ~ 0
+RESET
+Wire Wire Line
+	5700 4250 5900 4250
+Wire Wire Line
+	5900 4250 5900 4300
+Wire Wire Line
+	5900 4300 6050 4300
+Wire Wire Line
+	5700 4900 6050 4900
+$Comp
+L C C1
+U 1 1 5A931733
+P 6550 1500
+F 0 "C1" H 6575 1600 50  0000 L CNN
+F 1 "100nF" H 6575 1400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6588 1350 50  0001 C CNN
+F 3 "" H 6550 1500 50  0001 C CNN
+	1    6550 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 1500 6400 1500
+Wire Wire Line
+	6700 1500 6850 1500
+Wire Wire Line
+	6850 1500 6850 2450
+Connection ~ 6850 2350
+$Comp
+L CP C2
+U 1 1 5A931D2C
+P 9350 1500
+F 0 "C2" H 9375 1600 50  0000 L CNN
+F 1 "CP" H 9375 1400 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Reflow" H 9388 1350 50  0001 C CNN
+F 3 "" H 9350 1500 50  0001 C CNN
+	1    9350 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9050 1250 9050 1400
+Wire Wire Line
+	9050 1250 9650 1250
+Connection ~ 9050 1350
+Wire Wire Line
+	9000 1800 9650 1800
+Connection ~ 9000 1750
+Wire Wire Line
+	9350 1250 9350 1350
+Wire Wire Line
+	9350 1800 9350 1650
+$Comp
+L RELE_THT_BI_5V-RESCUE-TermoCloud U1
+U 1 1 5A932AA2
+P 2350 6200
+F 0 "U1" H 1950 6200 60  0000 C CNN
+F 1 "RELE_THT_BI_5V" V 2700 6200 60  0000 C CNN
+F 2 "Relays_THT:RELE_THT_2Coin" H 2000 5650 60  0001 C CNN
+F 3 "" H 2000 5650 60  0001 C CNN
+	1    2350 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR015
+U 1 1 5A932F41
+P 2100 6850
+F 0 "#PWR015" H 2100 6700 50  0001 C CNN
+F 1 "+5V" H 2100 6990 50  0000 C CNN
+F 2 "" H 2100 6850 50  0001 C CNN
+F 3 "" H 2100 6850 50  0001 C CNN
+	1    2100 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR016
+U 1 1 5A93315D
+P 2600 6850
+F 0 "#PWR016" H 2600 6700 50  0001 C CNN
+F 1 "+5V" H 2600 6990 50  0000 C CNN
+F 2 "" H 2600 6850 50  0001 C CNN
+F 3 "" H 2600 6850 50  0001 C CNN
+	1    2600 6850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2100 6850 2100 6650
+Wire Wire Line
+	2600 6850 2600 6650
+Text GLabel 2100 5600 1    60   Input Italic 12
+SET-
+Text GLabel 2600 5600 1    60   Input Italic 12
+RESET-
+Wire Wire Line
+	2100 5750 2100 5600
+Wire Wire Line
+	2600 5750 2600 5600
+Text GLabel 2250 7100 3    60   Input ~ 0
+CALDERA_L
+Text GLabel 2500 7100 3    60   Input ~ 0
+CALDERA_N
+Text GLabel 3700 4650 2    60   Input Italic 12
+CALIENTE_PI
+Wire Wire Line
+	2250 7100 2250 6850
+Wire Wire Line
+	2250 6850 2350 6850
+Wire Wire Line
+	2350 6850 2350 6650
+Wire Wire Line
+	2450 6650 2450 7000
+Wire Wire Line
+	2450 7000 2500 7000
+Wire Wire Line
+	2500 7000 2500 7100
+Text Notes 550  6750 0    60   ~ 0
+Relé para activar la calefacción
+$Comp
+L C C3
+U 1 1 5A935442
+P 9650 1500
+F 0 "C3" H 9675 1600 50  0000 L CNN
+F 1 "100nF" H 9675 1400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9688 1350 50  0001 C CNN
+F 3 "" H 9650 1500 50  0001 C CNN
+	1    9650 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9650 1250 9650 1350
+Connection ~ 9350 1250
+Wire Wire Line
+	9650 1800 9650 1650
+Connection ~ 9350 1800
+Wire Wire Line
+	5400 4400 6050 4400
+Wire Wire Line
+	5900 3900 6050 3900
+Wire Wire Line
+	3400 4750 3250 4750
+NoConn ~ 3250 4650
+NoConn ~ 2250 6650
+NoConn ~ 2350 5750
+NoConn ~ 2250 5750
+NoConn ~ 2450 5750
+NoConn ~ 3150 1450
+NoConn ~ 6600 2350
+NoConn ~ 7050 3300
+NoConn ~ 7150 3300
+NoConn ~ 7850 3700
+NoConn ~ 7850 3800
+NoConn ~ 7850 3900
+NoConn ~ 7850 4100
+NoConn ~ 7850 4200
+NoConn ~ 7850 4400
+NoConn ~ 7850 4500
+NoConn ~ 7850 4600
+NoConn ~ 7850 4700
+NoConn ~ 7850 4800
+NoConn ~ 7850 5000
+NoConn ~ 7850 5100
+NoConn ~ 7850 5300
+NoConn ~ 7850 5400
+NoConn ~ 6050 4000
+NoConn ~ 6050 4100
+NoConn ~ 6050 4200
+NoConn ~ 6050 4500
+NoConn ~ 6050 4600
+NoConn ~ 6050 4700
+NoConn ~ 6050 4800
+NoConn ~ 6050 5000
+NoConn ~ 6050 5300
+NoConn ~ 6050 5400
+NoConn ~ 3150 3150
+Wire Wire Line
+	8000 1350 8000 950 
+Wire Wire Line
+	8000 950  8400 950 
+$Comp
+L Fuse F1
+U 1 1 5A9974BE
+P 7750 1200
+F 0 "F1" V 7830 1200 50  0000 C CNN
+F 1 "Fuse" V 7675 1200 50  0000 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_SemiClosed_Casing10x25mm" V 7680 1200 50  0001 C CNN
+F 3 "" H 7750 1200 50  0001 C CNN
+	1    7750 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 1650 7750 1350
+Wire Wire Line
+	7750 1050 7750 850 
+Wire Wire Line
+	7750 850  8400 850 
+$Comp
+L Screw_Terminal_01x01 J5
+U 1 1 5A9C045D
+P 9400 3550
+F 0 "J5" H 9400 3650 50  0000 C CNN
+F 1 "Screw_Terminal_01x01" H 9400 3450 50  0000 C CNN
+F 2 "Connectors:1pin" H 9400 3550 50  0001 C CNN
+F 3 "" H 9400 3550 50  0001 C CNN
+	1    9400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x01 J6
+U 1 1 5A9C04F3
+P 9400 3900
+F 0 "J6" H 9400 4000 50  0000 C CNN
+F 1 "Screw_Terminal_01x01" H 9400 3800 50  0000 C CNN
+F 2 "Connectors:1pin" H 9400 3900 50  0001 C CNN
+F 3 "" H 9400 3900 50  0001 C CNN
+	1    9400 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x01 J7
+U 1 1 5A9C058E
+P 9400 4200
+F 0 "J7" H 9400 4300 50  0000 C CNN
+F 1 "Screw_Terminal_01x01" H 9400 4100 50  0000 C CNN
+F 2 "Connectors:1pin" H 9400 4200 50  0001 C CNN
+F 3 "" H 9400 4200 50  0001 C CNN
+	1    9400 4200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9200 3550
+$Comp
+L GND #PWR017
+U 1 1 5A9C0848
+P 8850 4200
+F 0 "#PWR017" H 8850 3950 50  0001 C CNN
+F 1 "GND" H 8850 4050 50  0000 C CNN
+F 2 "" H 8850 4200 50  0001 C CNN
+F 3 "" H 8850 4200 50  0001 C CNN
+	1    8850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 5A9C0A0E
+P 8850 3900
+F 0 "#PWR018" H 8850 3650 50  0001 C CNN
+F 1 "GND" H 8850 3750 50  0000 C CNN
+F 2 "" H 8850 3900 50  0001 C CNN
+F 3 "" H 8850 3900 50  0001 C CNN
+	1    8850 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 3900 9200 3900
+Wire Wire Line
+	8850 4200 9200 4200
+$EndSCHEMATC
