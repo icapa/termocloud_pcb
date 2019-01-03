@@ -1,4 +1,4 @@
-update=lunes, 26 '26e' febrero '26e' 2018, 22:15:28
+update=jueves, 22 '22e' marzo '22e' 2018, 23:00:19
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=contrib
 LibName30=valves
 LibName31=Lib/TermoCloud
 LibName32=makerlab
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
